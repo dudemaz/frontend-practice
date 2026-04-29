@@ -2,24 +2,37 @@
   "name": "burgersite",
   "version": "1.0.0",
   "description": "",
-  
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "npx prettier --check . && npx eslint . && npx stylelint '**/*.{css,scss}'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-    "lint-staged": {
-    "**/*.{js,css,html,md}": "npx prettier --write"
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ],
+    "*.{css,scss}": [
+      "npx prettier --write",
+      "npx stylelint --fix"
+    ],
+    "*.{html,md}": "npx prettier --write"
   },
   "type": "commonjs",
   "devDependencies": {
     "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "stylelint": "^17.9.1",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
