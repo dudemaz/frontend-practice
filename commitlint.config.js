@@ -16,7 +16,7 @@ module.exports = {
         'revert',
         'build',
         'ci',
-        'wip',
+        'mvp',
       ],
     ],
     'scope-case': [2, 'always', 'lower-case'],
