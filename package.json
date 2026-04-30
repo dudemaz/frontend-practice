@@ -1,13 +1,47 @@
 {
-  "name": "burgersite",
+  "name": "crypto-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "main.js",
+"scripts": {
+  "dev": "vite",
+  "build": "tsc && vite build",
+  "preview": "vite preview",
+  "lint": "npx prettier --check . && npx eslint . && npx stylelint '**/*.{css,scss}'",
+  "format": "prettier --write \"src/**/*.{ts,css}\"",
+  "prepare": "husky"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ],
+    "*.{css,scss}": [
+      "npx prettier --write",
+      "npx stylelint --fix"
+    ],
+    "*.{html,md}": "npx prettier --write"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.2",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.1",
+    "@typescript-eslint/parser": "^8.59.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.9.1",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1",
+    "vite": "^8.0.10"
+  }
 }
