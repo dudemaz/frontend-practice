@@ -1,4 +1,4 @@
-function testTSAndLinters(a: number, b:number): number{
-    return a + b
-} 
-testTSAndLinters(10, 20)
+function testTSAndLintersrevork(a: number, b: number): number {
+  return a + b;
+}
+testTSAndLintersrevork(10, 20);
