@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-"scripts": {
-  "dev": "vite",
-  "build": "tsc && vite build",
-  "preview": "vite preview",
-  "lint": "npx prettier --check . && npx eslint . && npx stylelint '**/*.{css,scss}'",
-  "format": "prettier --write \"src/**/*.{ts,css}\"",
-  "prepare": "husky"
-},
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "npx prettier --check . && npx eslint . && npx stylelint '**/*.{css,scss}'",
+    "format": "prettier --write \"src/**/*.{ts,css}\"",
+    "prepare": "husky"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
