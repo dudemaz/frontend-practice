@@ -1,0 +1,4 @@
+function testTSAndLintersrevork(a: number, b: number): number {
+  return a + b;
+}
+testTSAndLintersrevork(10, 20);
