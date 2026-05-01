@@ -1,0 +1,20 @@
+:root {
+  /* Цвета состояния фона */
+  --bg-main: #06071b;
+  --bg-block: #050510;
+
+  /* Цвета для текстов */
+  --text-main: #fff;
+  --text-muted: #8b8da1;
+
+  /* Цвета для обводки */
+  --border-muted: #8b8da1;
+
+  /* Радиусы */
+  --radius-item: 12px;
+  --radius-items: 15px;
+
+  /* цвет при навидении */
+  --hover-main: #d2c6c6;
+  --hover-matted: #7f829f;
+}

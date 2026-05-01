@@ -1,0 +1,5 @@
+@import url('../base/variables.css');
+
+#header {
+  background-color: var(--bg-main);
+}
