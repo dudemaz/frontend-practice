@@ -1,0 +1,40 @@
+@import url('../base/variables.css');
+
+#header {
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: var(--border-muted);
+  width: 100%;
+  min-height: 60px;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.logo {
+  width: 150px;
+}
+
+#nav-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--text-main);
+}
+
+#items-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.item-nav {
+  list-style: none;
+}
+
+#profile-section {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
