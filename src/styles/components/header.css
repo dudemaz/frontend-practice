@@ -20,6 +20,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  color: var(--text-main);
 }
 
 #items-nav {
@@ -29,7 +30,7 @@
 }
 
 .item-nav {
-  color: var(--text-main);
+  list-style: none;
 }
 
 #profile-section {
