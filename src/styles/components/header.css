@@ -38,3 +38,17 @@
   margin-left: auto;
   align-items: center;
 }
+
+.item-nav::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-matted);
+  transition: width 0.35s ease;
+}
+
+.item-nav:hover::after {
+  width: 100%;
+  left: 0;
+}
