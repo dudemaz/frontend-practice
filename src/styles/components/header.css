@@ -35,7 +35,7 @@
   display: flex;
   margin-left: auto;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 #login-button {
@@ -44,6 +44,10 @@
   border: none;
   color: var(--text-main);
   height: 40px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.35s;
 }
 
 #btn-primary {
@@ -53,6 +57,19 @@
   width: 100px;
   border-radius: var(--radius-item);
   height: 30px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s;
+}
+
+#btn-primary:hover {
+  background-color: var(--hover-but-blue);
+  border-color: var(--hover-but-blue);
+}
+
+#login-button:hover {
+  color: var(--hover-but-blue);
 }
 
 .item-nav::after {
