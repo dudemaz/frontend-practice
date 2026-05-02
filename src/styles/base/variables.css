@@ -2,6 +2,7 @@
   /* Цвета состояния фона */
   --bg-main: #06071b;
   --bg-block: #050510;
+  --bg-button: #7454f7;
 
   /* Цвета для текстов */
   --text-main: #fff;
@@ -11,7 +12,7 @@
   --border-muted: #8b8da1;
 
   /* Радиусы */
-  --radius-item: 12px;
+  --radius-item: 5px;
   --radius-items: 15px;
 
   /* цвет при навидении */

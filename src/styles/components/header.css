@@ -9,7 +9,7 @@
   width: 100%;
   min-height: 60px;
   padding: 0 20px;
-  gap: 30px;
+  gap: 70px;
 }
 
 .logo {
@@ -19,13 +19,11 @@
 #nav-section {
   display: flex;
   align-items: center;
-  gap: 30px;
-  color: var(--text-main);
 }
 
 #items-nav {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -37,4 +35,13 @@
   display: flex;
   margin-left: auto;
   align-items: center;
+}
+
+#login-button {
+  background-color: var(--bg-button);
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius-item);
+  color: var(--text-main);
+  width: 90px;
 }
