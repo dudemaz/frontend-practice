@@ -35,6 +35,24 @@
   display: flex;
   margin-left: auto;
   align-items: center;
+  gap: 20px;
+}
+
+#login-button {
+  width: 80px;
+  background-color: var(--bg-main);
+  border: none;
+  color: var(--text-main);
+  height: 40px;
+}
+
+#btn-primary {
+  color: var(--text-main);
+  background-color: var(--bg-but);
+  border-color: var(--bg-but);
+  width: 100px;
+  border-radius: var(--radius-item);
+  height: 30px;
 }
 
 .item-nav::after {
