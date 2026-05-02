@@ -37,11 +37,17 @@
   align-items: center;
 }
 
-#login-button {
-  background-color: var(--bg-button);
-  border: none;
-  padding: 10px;
-  border-radius: var(--radius-item);
-  color: var(--text-main);
-  width: 90px;
+.item-nav::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-matted);
+  transition: width 0.35s ease;
+}
+
+/* a */
+.item-nav:hover::after {
+  width: 100%;
+  left: 0;
 }
