@@ -9,7 +9,7 @@
   width: 100%;
   min-height: 60px;
   padding: 0 20px;
-  gap: 30px;
+  gap: 70px;
 }
 
 .logo {
@@ -19,13 +19,11 @@
 #nav-section {
   display: flex;
   align-items: center;
-  gap: 30px;
-  color: var(--text-main);
 }
 
 #items-nav {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -37,4 +35,54 @@
   display: flex;
   margin-left: auto;
   align-items: center;
+  gap: 5px;
+}
+
+#login-button {
+  width: 80px;
+  background-color: var(--bg-main);
+  border: none;
+  color: var(--text-main);
+  height: 40px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.35s;
+}
+
+#btn-primary {
+  color: var(--text-main);
+  background-color: var(--bg-but);
+  border-color: var(--bg-but);
+  width: 100px;
+  border-radius: var(--radius-item);
+  height: 30px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s;
+}
+
+#btn-primary:hover {
+  background-color: var(--hover-but-blue);
+  border-color: var(--hover-but-blue);
+}
+
+#login-button:hover {
+  color: var(--hover-but-blue);
+}
+
+.item-nav::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-matted);
+  transition: width 0.35s ease;
+}
+
+/* a */
+.item-nav:hover::after {
+  width: 100%;
+  left: 0;
 }
