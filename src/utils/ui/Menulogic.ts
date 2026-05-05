@@ -1,7 +1,7 @@
-import { domEl } from './domlist.js';
+import { domElOfHeader } from './domlist.js';
 
 export function addClassOnBurgerMenu() {
-  domEl.inputMenu?.addEventListener('click', () => {
-    domEl.navSection?.classList.toggle('open-burger');
+  domElOfHeader.inputMenu?.addEventListener('click', () => {
+    domElOfHeader.navSection?.classList.toggle('open-burger');
   });
 }

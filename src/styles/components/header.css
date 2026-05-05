@@ -7,13 +7,14 @@
   justify-content: space-between;
   border: var(--border-muted);
   width: 100%;
-  min-height: 60px;
+  min-height: 62px;
   padding: 0 20px;
   gap: 70px;
 }
 
 .logo {
   width: 150px;
+  height: 100%;
 }
 
 #nav-section {
@@ -188,5 +189,21 @@ label {
   #burger-toggle:checked ~ label span {
     transform: rotate(-45deg);
     top: 12px;
+  }
+}
+
+.draw-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw 3s cubic-bezier(0.3, 0, 0.55, 1) forwards;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 600;
+  }
+
+  to {
+    stroke-dashoffset: 110;
   }
 }
