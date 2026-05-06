@@ -97,6 +97,14 @@ label {
 }
 
 @media (width <= 840px) {
+  .logo {
+    flex-grow: 1;
+  }
+
+  .profile-section {
+    margin-right: 10px;
+  }
+
   #nav-section {
     display: none;
   }
