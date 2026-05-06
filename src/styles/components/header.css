@@ -82,7 +82,6 @@
   transition: width 0.35s ease;
 }
 
-/* a */
 .item-nav:hover::after {
   width: 100%;
   left: 0;
@@ -97,6 +96,14 @@ label {
 }
 
 @media (width <= 840px) {
+  .logo {
+    flex-grow: 1;
+  }
+
+  .profile-section {
+    margin-right: 10px;
+  }
+
   #nav-section {
     display: none;
   }
