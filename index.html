@@ -63,7 +63,101 @@
           <span></span>
         </label>
       </header>
-      <section id="hero-section"></section>
+      <section id="hero-section">
+        <svg
+          viewBox="0 0 1000 500"
+          preserveAspectRatio="xMidYMid slice"
+          xmlns="http://w3.org"
+          xmlns:xlink="http://w3.org"
+        >
+          <defs>
+            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#001a66" />
+              <stop offset="50%" stop-color="#00d4ff" />
+              <stop offset="100%" stop-color="#001a66" />
+            </linearGradient>
+
+            <!-- Путь 1: Верх-Лево -> Центр -> Низ-Право (с расширением на концах) -->
+            <path
+              id="wing1"
+              d="M-100,-50 C150,0 400,250 500,250 C600,250 850,450 1100,550"
+            />
+
+            <!-- Путь 2: Низ-Лево -> Центр -> Верх-Право (с расширением на концах) -->
+            <path
+              id="wing2"
+              d="M-100,550 C150,450 400,250 500,250 C600,250 850,50 1100,-50"
+            />
+          </defs>
+
+          <g class="stream">
+            <!-- Генерируем "крылья" хромосомы -->
+            <!-- Верхне-нижний поток -->
+            <use
+              xlink:href="#wing1"
+              class="line main-glow"
+              style="animation-delay: 0s; stroke-width: 6px"
+            />
+            <use
+              xlink:href="#wing1"
+              class="line"
+              style="animation-delay: 0.8s; stroke-width: 2px"
+              y="10"
+            />
+            <use
+              xlink:href="#wing1"
+              class="line"
+              style="animation-delay: 1.5s; stroke-width: 1px"
+              y="-10"
+            />
+            <use
+              xlink:href="#wing1"
+              class="line"
+              style="animation-delay: 2.2s; stroke-width: 0.5px"
+              y="15"
+            />
+
+            <!-- Нижне-верхний поток -->
+            <use
+              xlink:href="#wing2"
+              class="line main-glow"
+              style="animation-delay: 0.4s; stroke-width: 6px"
+            />
+            <use
+              xlink:href="#wing2"
+              class="line"
+              style="animation-delay: 1.2s; stroke-width: 5px"
+              y="-10"
+            />
+            <use
+              xlink:href="#wing2"
+              class="line"
+              style="animation-delay: 1.9s; stroke-width: 2px"
+              y="10"
+            />
+            <use
+              xlink:href="#wing2"
+              class="line"
+              style="animation-delay: 2.7s; stroke-width: 1.5px"
+              y="-10"
+            />
+
+            <!-- Плотные нити в самом центре для яркости узла -->
+            <use
+              xlink:href="#wing1"
+              class="line"
+              style="animation-delay: 0.1s; stroke-width: 5px; opacity: 1"
+              y="2"
+            />
+            <use
+              xlink:href="#wing2"
+              class="line"
+              style="animation-delay: 0.1s; stroke-width: 5px; opacity: 1"
+              y="-2"
+            />
+          </g>
+        </svg>
+      </section>
     </div>
   </body>
 </html>

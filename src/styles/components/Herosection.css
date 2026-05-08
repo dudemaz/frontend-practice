@@ -1,0 +1,70 @@
+#hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #010208 !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-section svg {
+  width: 100%;
+  height: 100%;
+
+  /* Глубокий неоновый ореол */
+  filter: drop-shadow(0 0 10px #00d4ff) drop-shadow(0 0 25px #002fad);
+}
+
+.line {
+  fill: none;
+  stroke: url('#neonGradient');
+  stroke-linecap: round;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: flow-speed 5s linear infinite;
+}
+
+/* Эффект тех самых "увеличенных" боковых линий */
+.main-glow {
+  opacity: 0.9;
+  filter: blur(1.5px) brightness(1.8); /* Делаем линии объемными и яркими */
+}
+
+@keyframes flow-speed {
+  0% {
+    stroke-dashoffset: 2500;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.8;
+  }
+
+  85% {
+    opacity: 0.8;
+  }
+
+  100% {
+    stroke-dashoffset: -2500;
+    opacity: 0;
+  }
+}
+
+/* Пульсация всего пучка */
+.stream {
+  animation: energy-pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes energy-pulse {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1.3) contrast(1.1);
+  }
+}
