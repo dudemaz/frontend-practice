@@ -1,20 +1,38 @@
-#hero-section {
-  position: relative;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
   width: 100%;
   height: 100vh;
-  background: #010208 !important;
-  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
+
+#header {
+  flex-shrink: 0;
+}
+
+#hero-section {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #010208;
 }
 
 #hero-section svg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-
-  /* Глубокий неоновый ореол */
-  filter: drop-shadow(0 0 10px #00d4ff) drop-shadow(0 0 25px #002fad);
+  display: block;
 }
 
 .line {
@@ -25,13 +43,11 @@
   opacity: 0.5;
   stroke-dasharray: 2500;
   stroke-dashoffset: 2500;
-  animation: flow-speed 5s linear infinite;
+  animation: flow-speed 10s linear infinite;
 }
 
-/* Эффект тех самых "увеличенных" боковых линий */
 .main-glow {
   opacity: 0.9;
-  filter: blur(1.5px) brightness(1.8); /* Делаем линии объемными и яркими */
 }
 
 @keyframes flow-speed {
@@ -52,11 +68,6 @@
     stroke-dashoffset: -2500;
     opacity: 0;
   }
-}
-
-/* Пульсация всего пучка */
-.stream {
-  animation: energy-pulse 4s ease-in-out infinite alternate;
 }
 
 @keyframes energy-pulse {
