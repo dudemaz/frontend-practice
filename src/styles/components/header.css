@@ -19,18 +19,10 @@
   align-items: center;
 }
 
-#nav-section {
-  display: flex;
-  align-items: center;
-}
-
 #items-nav {
   display: flex;
   gap: 40px;
   align-items: center;
-}
-
-.item-nav {
   list-style: none;
 }
 
@@ -89,10 +81,7 @@
   left: 0;
 }
 
-label {
-  display: none;
-}
-
+label,
 #burger-toggle {
   display: none;
 }
@@ -105,6 +94,33 @@ label {
   .logo svg:last-child {
     display: none;
   }
+  
+  #login-button {
+    width: 80px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    height: 40px;
+    border-radius: var(--radius-item);
+    cursor: pointer;
+    z-index: 9999;
+    transition:
+      transform 0.3s ease-in-out,
+      color 0.35s;
+  }
+
+  #btn-primary {
+    color: var(--text-main);
+    background-color: var(--bg-but);
+    border-color: var(--bg-but);
+    width: 100px;
+    border-radius: var(--radius-item);
+    height: 40px;
+    cursor: pointer;
+    z-index: 9999;
+    transition:
+      transform 0.3s ease-in-out,
+      background-color 0.3s;
+  }
 
   .profile-section {
     margin-right: 10px;
@@ -112,6 +128,30 @@ label {
 
   #nav-section {
     display: none;
+  }
+
+  #header:has(#nav-section.open-burger) #profile-section {
+    position: fixed;
+    bottom: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    width: min(280px, 85vw);
+    max-width: none;
+    margin: 0;
+    gap: 12px;
+    z-index: 1001;
+  }
+
+  #header:has(#nav-section.open-burger) #login-button {
+    border: 1px solid var(--border-muted);
+    width: 100%;
+    height: 44px;
+  }
+
+  #header:has(#nav-section.open-burger) #btn-primary {
+    width: 100%;
+    height: 44px;
   }
 
   #nav-section.open-burger {
@@ -136,20 +176,6 @@ label {
 
   #header {
     gap: 0;
-  }
-
-  #login-button {
-    width: 60px;
-  }
-
-  #btn-primary {
-    width: 90px;
-  }
-
-  #profile-section {
-    max-width: 150px;
-    gap: 5px;
-    margin-left: 20px;
   }
 
   #burger-toggle:checked ~ nav-section {
@@ -194,11 +220,7 @@ label {
     bottom: 10px;
   }
 
-  #burger-toggle:checked ~ label::before {
-    transform: rotate(-45deg);
-    top: 12px;
-  }
-
+  #burger-toggle:checked ~ label::before,
   #burger-toggle:checked ~ label span {
     transform: rotate(-45deg);
     top: 12px;
