@@ -4,10 +4,15 @@
   --bg-block: #050510;
   --bg-button: #6746ea;
   --bg-but: #0040ff;
+  --bg-info: #091b43;
+  --bg-crypto-tracker: #01071d;
 
   /* Цвета для текстов */
   --text-main: #fff;
   --text-muted: #8b8da1;
+  --color-text-accent: #6bbde5;
+  --text-positive-percentage: #129018;
+  --text-negative-precentage: #ca2525;
 
   /* Цвета для обводки */
   --border-muted: #8b8da1;
@@ -20,4 +25,8 @@
   --hover-main: #d2c6c6;
   --hover-matted: #7f829f;
   --hover-but-blue: #1a53ff;
+
+  /* Цвета графиков */
+  --positive-chart: #226325;
+  --negative-chart: #9a121b;
 }
