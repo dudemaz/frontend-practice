@@ -102,6 +102,10 @@ label {
     flex-grow: 1;
   }
 
+  .logo svg:last-child {
+    display: none;
+  }
+
   .profile-section {
     margin-right: 10px;
   }
