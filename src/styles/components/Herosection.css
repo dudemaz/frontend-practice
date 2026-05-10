@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  flex-shrink: 0;
+}
+
+#hero-section {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #010208;
+}
+
+#hero-section svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.line {
+  fill: none;
+  stroke: url('#neonGradient');
+  stroke-linecap: round;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  animation: flow-speed 10s linear infinite;
+}
+
+.main-glow {
+  opacity: 0.9;
+}
+
+@keyframes flow-speed {
+  0% {
+    stroke-dashoffset: 2500;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.8;
+  }
+
+  85% {
+    opacity: 0.8;
+  }
+
+  100% {
+    stroke-dashoffset: -2500;
+    opacity: 0;
+  }
+}
+
+@keyframes energy-pulse {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1.3) contrast(1.1);
+  }
+}
