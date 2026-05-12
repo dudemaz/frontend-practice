@@ -10,6 +10,7 @@
   min-height: 62px;
   padding: 0 20px;
   gap: 70px;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -94,7 +95,7 @@ label,
   .logo svg:last-child {
     display: none;
   }
-  
+
   #login-button {
     width: 80px;
     background-color: var(--bg-main);
